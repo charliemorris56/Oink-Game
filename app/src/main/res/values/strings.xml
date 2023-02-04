@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Oink</string>
+    <string name="buy_item1">0</string>
+    <string name="buy_item2">0</string>
+    <string name="buy_item3">0</string>
+    <string name="buy_item4">0</string>
+    <string name="animal_collection1">0</string>
+    <string name="animal_collection2">0</string>
+    <string name="animal_collection3">0</string>
+</resources>
