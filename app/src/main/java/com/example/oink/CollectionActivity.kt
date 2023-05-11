@@ -21,17 +21,17 @@ class CollectionActivity : AppCompatActivity() {
             startActivity(intent);
         }
 
-        val debugButtonClick = findViewById<Button>(R.id.debugButton)
-        debugButtonClick.setOnClickListener {
-            //RESET
-            with(sharedPref.edit())
-            {
-                putInt("animal_collection1", 0);
-                putInt("animal_collection2", 0);
-                putInt("animal_collection3", 0);
-                apply();
-            }
-        }
+//        val debugButtonClick = findViewById<Button>(R.id.debugButton)
+//        debugButtonClick.setOnClickListener {
+//            //RESET
+//            with(sharedPref.edit())
+//            {
+//                putInt("animal_collection1", 0);
+//                putInt("animal_collection2", 0);
+//                putInt("animal_collection3", 0);
+//                apply();
+//            }
+//        }
 
         var collectionButtons = arrayOf(
             findViewById<Button>(R.id.animalCollectionButton),

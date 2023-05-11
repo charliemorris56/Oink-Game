@@ -4,25 +4,31 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background_farm"
     tools:context=".CollectionActivity">
 
     <Button
         android:id="@+id/homeButton"
+        android:stateListAnimator="@null"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Home"
+        android:backgroundTint="#00FFFFFF"
+        android:drawableLeft="@drawable/home_64x64"
+        android:drawableTint="#FF5252"
+        android:fontFamily="sans-serif-medium"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="SpeakableTextPresentCheck" />
 
-    <Button
-        android:id="@+id/debugButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="2dp"
-        android:layout_marginBottom="4dp"
-        android:text="Debug"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+<!--    <Button-->
+<!--        android:id="@+id/debugButton"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginEnd="2dp"-->
+<!--        android:layout_marginBottom="4dp"-->
+<!--        android:text="Debug"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent" />-->
 
     <Button
         android:id="@+id/animalCollectionButton"
@@ -30,6 +36,11 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="260dp"
         android:text="Pig"
+        android:textAllCaps="false"
+        android:textColor="#FF5252"
+        android:textSize="40sp"
+        android:backgroundTint="#E6FFFFFF"
+        android:fontFamily="sans-serif-medium"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -39,22 +50,30 @@
         android:id="@+id/animalCollectionButton2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="340dp"
+        android:layout_marginTop="10dp"
         android:text="Cow"
+        android:textAllCaps="false"
+        android:textColor="#FF5252"
+        android:textSize="40sp"
+        android:backgroundTint="#E6FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@id/animalCollectionButton" />
 
     <Button
         android:id="@+id/animalCollectionButton3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="420dp"
+        android:layout_marginTop="10dp"
         android:text="Sheep"
+        android:textAllCaps="false"
+        android:textColor="#FF5252"
+        android:textSize="40sp"
+        android:backgroundTint="#E6FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@id/animalCollectionButton2" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

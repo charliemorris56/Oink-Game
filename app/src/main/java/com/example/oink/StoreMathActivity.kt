@@ -60,10 +60,10 @@ class StoreMathActivity : AppCompatActivity() {
             }
         }
 
-        val debugButtonClick = findViewById<Button>(R.id.debugButton)
-        debugButtonClick.setOnClickListener {
-            Log.v("StoreMath", mathAnswer.text.toString());
-        }
+//        val debugButtonClick = findViewById<Button>(R.id.debugButton)
+//        debugButtonClick.setOnClickListener {
+//            Log.v("StoreMath", mathAnswer.text.toString());
+//        }
 
         val homeButtonClick = findViewById<Button>(R.id.homeButton)
         homeButtonClick.setOnClickListener {

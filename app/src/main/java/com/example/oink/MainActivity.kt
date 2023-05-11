@@ -5,6 +5,7 @@ import android.content.Intent
 import android.content.pm.PackageManager
 import android.os.Bundle
 import android.util.Log
+import android.view.Window
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
@@ -47,11 +48,13 @@ class MainActivity : AppCompatActivity() {
         fun AnimalCollectionSetup() {
             for (i in 1..3) {
                 var itemSharedPref = "animal_collection$i";
+                var itemSharedPref2 = "animal_collection_facts$i";
 
                 if (sharedPref.getInt("animal_collection1", 99) == 99) {
                     with(sharedPref.edit())
                     {
                         putInt(itemSharedPref, 0);
+                        putString(itemSharedPref2, "");
                         apply();
                     }
                 }

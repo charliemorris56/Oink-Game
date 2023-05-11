@@ -46,7 +46,7 @@ class StoreActivity : AppCompatActivity() {
                 Log.v("buyItem", "Item $itemNum already brought");
             } else {
                 sharedPref.edit().putInt(itemSharedPref, 1).apply();
-                Log.v("buyItem", "Item $itemNum brought");
+                Log.v("buyItem", "Own Item $itemNum");
             }
         }
 
@@ -59,36 +59,36 @@ class StoreActivity : AppCompatActivity() {
 
         storeButtons[0].setOnClickListener {
             buyItem(1);
-            storeButtons[0].text = "Item 1 Brought";
+            storeButtons[0].text = "Own Item 1";
         }
 
         storeButtons[1].setOnClickListener {
             buyItem(2);
-            storeButtons[1].text = "Item 2 Brought";
+            storeButtons[1].text = "Own Item 2";
         }
 
         storeButtons[2].setOnClickListener {
             buyItem(3);
-            storeButtons[2].text = "Item 3 Brought";
+            storeButtons[2].text = "Own Item 3";
         }
 
         storeButtons[3].setOnClickListener {
             buyItem(4);
-            storeButtons[3].text = "Item 4 Brought";
+            storeButtons[3].text = "Own Item 4";
         }
 
-        val debugButtonClick = findViewById<Button>(R.id.debugButton)
-        debugButtonClick.setOnClickListener {
-            //RESET
-            with(sharedPref.edit())
-            {
-                putInt("buy_item1", 0);
-                putInt("buy_item2", 0);
-                putInt("buy_item3", 0);
-                putInt("buy_item4", 0);
-                apply();
-            }
-        }
+//        val debugButtonClick = findViewById<Button>(R.id.debugButton)
+//        debugButtonClick.setOnClickListener {
+//            //RESET
+//            with(sharedPref.edit())
+//            {
+//                putInt("buy_item1", 0);
+//                putInt("buy_item2", 0);
+//                putInt("buy_item3", 0);
+//                putInt("buy_item4", 0);
+//                apply();
+//            }
+//        }
 
         fun buttonSetup() {
             for (i in 1..4) {
@@ -100,7 +100,7 @@ class StoreActivity : AppCompatActivity() {
                         storeButtons[i-1].text = "Buy Item $i";
                     }
                     1 -> {
-                        storeButtons[i-1].text = "Item $i Brought";
+                        storeButtons[i-1].text = "Own Item $i";
                     }
                     99 -> {
                         storeButtons[i-1].text = "Buy Item $i";

@@ -7,4 +7,7 @@
     <string name="animal_collection1">0</string>
     <string name="animal_collection2">0</string>
     <string name="animal_collection3">0</string>
+    <string name="animal_collection_facts1">0</string>
+    <string name="animal_collection_facts2">0</string>
+    <string name="animal_collection_facts3">0</string>
 </resources>

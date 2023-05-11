@@ -15,6 +15,7 @@ import android.speech.RecognizerIntent
 import android.util.JsonReader
 import android.util.Log
 import android.widget.Button
+import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.core.app.ActivityCompat
@@ -37,13 +38,13 @@ class PlayActivity : AppCompatActivity() {
         PermissionCheck();
         AnimalRandomiser();
 
-        val debugButtonClick = findViewById<Button>(R.id.debugButton)
-        debugButtonClick.setOnClickListener {
-            //Timer();
-            //GetRhymeWords();
-            //Timer();
-            SpeechToTextAnimalChecker();
-        }
+//        val debugButtonClick = findViewById<Button>(R.id.debugButton)
+//        debugButtonClick.setOnClickListener {
+//            //Timer();
+//            //GetRhymeWords();
+//            //Timer();
+//            SpeechToTextAnimalChecker();
+//        }
 
         val homeButtonClick = findViewById<Button>(R.id.homeButton)
         homeButtonClick.setOnClickListener {
@@ -51,13 +52,14 @@ class PlayActivity : AppCompatActivity() {
             startActivity(intent);
         }
 
-        val speechToTextButton = findViewById<Button>(R.id.speechToTextButton)
-        speechToTextButton.setOnClickListener {
-            StartSpeechToText();
-        }
+//        val speechToTextButton = findViewById<Button>(R.id.speechToTextButton)
+//        speechToTextButton.setOnClickListener {
+//            StartSpeechToText();
+//        }
 
         var animalText = findViewById<TextView>(R.id.animalText);
         animalText.text = animalName;
+        SetAnimalImage();
 
         Timer();
     }
@@ -115,6 +117,23 @@ class PlayActivity : AppCompatActivity() {
                 animalNoiseRhymeSounds = rhymeJson;
             }
         })
+    }
+
+    private fun SetAnimalImage()
+    {
+        var animalImage = findViewById<ImageView>(R.id.animalImage);
+
+        when (animalName) {
+            "Cow" -> {
+                animalImage.setImageResource(R.drawable.cow_clean2);
+            }
+            "Pig" -> {
+                animalImage.setImageResource(R.drawable.pig_clean2);
+            }
+            "Sheep" -> {
+                animalImage.setImageResource(R.drawable.sheep_clean2);
+            }
+        }
     }
 
     private fun SpeechToTextAnimalChecker()
